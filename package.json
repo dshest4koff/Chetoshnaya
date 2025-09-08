@@ -1,5 +1,6 @@
 {
   "name": "dadya-vanya",
+  "homepage": "https://dshest4koff.github.io/Chetoshnaya/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +19,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://dshest4koff.github.io/Chetoshnaya/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
