@@ -31,7 +31,7 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: { xs: '1rem', md: '2rem' },
-  maxWidth: { xs: '90%', sm: '80%' },
+  minWidth: "75%",
   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
   borderRadius: '16px',
   backgroundColor: '#ffffffee',
