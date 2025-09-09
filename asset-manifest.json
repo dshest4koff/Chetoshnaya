@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Chetoshnaya/static/css/main.10d9c59d.css",
-    "main.js": "/Chetoshnaya/static/js/main.72a376df.js",
+    "main.js": "/Chetoshnaya/static/js/main.6d182be8.js",
     "static/js/453.542bf6a5.chunk.js": "/Chetoshnaya/static/js/453.542bf6a5.chunk.js",
     "index.html": "/Chetoshnaya/index.html",
     "main.10d9c59d.css.map": "/Chetoshnaya/static/css/main.10d9c59d.css.map",
-    "main.72a376df.js.map": "/Chetoshnaya/static/js/main.72a376df.js.map",
+    "main.6d182be8.js.map": "/Chetoshnaya/static/js/main.6d182be8.js.map",
     "453.542bf6a5.chunk.js.map": "/Chetoshnaya/static/js/453.542bf6a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10d9c59d.css",
-    "static/js/main.72a376df.js"
+    "static/js/main.6d182be8.js"
   ]
 }
