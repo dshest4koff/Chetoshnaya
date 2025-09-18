@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import Tooltip from '@mui/material/Tooltip';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import Link from '@mui/material/Link';
+import Papa from 'papaparse';
 
 const Title = styled('h1')(({ theme }) => ({
   fontFamily: "'Inter', sans-serif",
@@ -322,6 +323,25 @@ ${Object.entries(statistics.distribution)
     }
   };
 
+const handleSaveCSV = () => {
+  const csv = Papa.unparse({
+    data: data,
+  });
+
+  // Добавляем BOM для правильной поддержки UTF-8 с русскими символами
+  const bom = "\uFEFF";
+  const csvWithBom = bom + csv;
+
+  const blob = new Blob([csvWithBom], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'заявки.csv';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   if (!data || data.length === 0) return null;
 
   const operators = Array.from(uniqueOperators(splitingTickets(ticketsForSecond(data)).singleTickets));
@@ -403,6 +423,17 @@ ${Object.entries(statistics.distribution)
             >
                 Совместные заявки(необработанные)
             </FilterButton>)}
+
+
+          <Button
+            sx={{ ml: 2 }}
+            variant="contained"
+            color="primary"
+            onClick={handleSaveCSV}
+      
+          >
+            Сохранить в CSV
+          </Button>
       </Box>
       {/* Таблица с данными */}
       <StyledTableContainer component={Paper}>
